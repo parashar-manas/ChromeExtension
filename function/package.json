@@ -1,0 +1,32 @@
+{
+  "name": "The World This Hour",
+  "version": "1.0.0",
+  "description": "Chrome extension for showing latest news.",
+  "author": "Manas Parashar",
+  "manifest_version": 3,
+  "permissions": [
+    "https://newsapi.org/*"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}
